@@ -1,138 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Jobs Watch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Jobs Watch</title>
 
-<style>
-body{
-font-family:Arial,sans-serif;
-margin:0;
-background:#f5f5f5;
-}
-
-header{
-background:#0057b8;
-color:white;
-padding:30px;
-text-align:center;
-}
-
-nav{
-background:#003f87;
-padding:15px;
-text-align:center;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
-}
-
-.hero{
-padding:50px;
-text-align:center;
-background:white;
-}
-
-.hero input{
-padding:12px;
-width:60%;
-max-width:400px;
-}
-
-.hero button{
-padding:12px 20px;
-background:#0057b8;
-color:white;
-border:none;
-cursor:pointer;
-}
-
-.section{
-padding:30px;
-}
-
-.card{
-background:white;
-padding:20px;
-margin:15px;
-border-radius:8px;
-box-shadow:0 2px 5px rgba(0,0,0,.1);
-}
-
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>The Jobs Watch</h1>
-<p>Find Your Next Opportunity</p>
+    <nav class="navbar">
+
+        <h1 class="logo">The Jobs Watch</h1>
+
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="learnerships.html">Learnerships</a></li>
+            <li><a href="internships.html">Internships</a></li>
+            <li><a href="bursaries.html">Bursaries</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
 </header>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Jobs</a>
-<a href="#">Learnerships</a>
-<a href="#">Internships</a>
-<a href="#">Bursaries</a>
-<a href="#">Contact</a>
-</nav>
+<section class="hero">
 
-<div class="hero">
-<h2>Search for Jobs</h2>
+    <h2>Find Your Next Opportunity</h2>
 
-<input type="text" placeholder="Search jobs...">
-<button>Search</button>
+    <p>
+        Search thousands of jobs, learnerships,
+        internships and bursaries across South Africa.
+    </p>
 
-</div>
+    <input type="text" placeholder="Search jobs...">
+    <button>Search</button>
 
-<div class="section">
+</section>
 
-<div class="card">
-<h2>Government Jobs</h2>
-<p>Latest government vacancies across South Africa.</p>
-</div>
-
-<div class="card">
-<h2>Private Company Jobs</h2>
-<p>Browse jobs from leading companies.</p>
-</div>
-
-<div class="card">
-<h2>Learnerships</h2>
-<p>Find the latest learnership opportunities.</p>
-</div>
-
-<div class="card">
-<h2>Internships</h2>
-<p>Graduate and student internship programmes.</p>
-</div>
-
-<div class="card">
-<h2>Bursaries</h2>
-<p>Scholarships and bursary opportunities.</p>
-</div>
-
-</div>
-
-<footer>
-
-© 2026 The Jobs Watch
-
-</footer>
+<script src="script.js"></script>
 
 </body>
 </html>
