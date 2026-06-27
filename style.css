@@ -43,12 +43,19 @@ nav a:hover{
 /* Hero */
 
 .hero{
+    background:
+    linear-gradient(rgba(10,102,194,0.75), rgba(10,102,194,0.75)),
+    url("hero.jpg");
 
-    background:white;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:white;
 
     text-align:center;
 
-    padding:60px 20px;
+    padding:100px 20px;
 }
 
 .hero h1{
