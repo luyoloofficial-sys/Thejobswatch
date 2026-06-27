@@ -12,6 +12,7 @@
 <body>
 
 <header>
+  <input type="text" id="searchBox" placeholder="Search jobs..." />
   <h1>💼 The Jobs Watch</h1>
   <p>Live job opportunities updated automatically</p>
 
@@ -38,6 +39,25 @@
 
   // 🔄 Load jobs automatically
   db.collection("jobs").onSnapshot(snapshot => {
+  jobsDiv.innerHTML = "";
+
+  snapshot.forEach(doc => {
+    let job = doc.data();
+
+    jobsDiv.innerHTML += `
+      <div class="job">
+        <img src="${job.image}" />
+        <h2>${job.title}</h2>
+        <p>📍 ${job.location}</p>
+        <p class="quote">${job.description}</p>
+
+        <a class="btn" href="${job.applyLink}" target="_blank">Apply</a>
+      </div>
+    `;
+  });
+
+  setupSearch();
+});
     jobsDiv.innerHTML = "";
 
     snapshot.forEach(doc => {
