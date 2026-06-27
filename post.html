@@ -7,19 +7,35 @@
 
 <body>
 
-<h1>Post a Job</h1>
+<header>
+  <h1>➕ Post a Job</h1>
+  <p>Share job opportunities with others</p>
+</header>
 
-<form action="https://formsubmit.co/youremail@gmail.com" method="POST">
+<section class="job">
 
-  <input type="text" name="job title" placeholder="Job Title" required><br><br>
+  <form action="https://formsubmit.co/youremail@gmail.com" method="POST">
 
-  <input type="text" name="location" placeholder="Location" required><br><br>
+    <input type="text" name="job_title" placeholder="Job Title" required>
 
-  <textarea name="description" placeholder="Job Description"></textarea><br><br>
+    <input type="text" name="location" placeholder="Location" required>
 
-  <button type="submit">Submit Job</button>
+    <input type="url" name="image_url" placeholder="Image URL (optional)">
 
-</form>
+    <input type="url" name="apply_link" placeholder="Apply Link (WhatsApp, Website, Email link)" required>
+
+    <textarea name="description" placeholder="Job Description / Motivation" required></textarea>
+
+    <!-- disables captcha page -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit" class="btn">Submit Job</button>
+
+  </form>
+
+  <p class="quote">“Opportunities multiply when shared.”</p>
+
+</section>
 
 </body>
 </html>
