@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Post a Job</title>
+  <title>Post Job</title>
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
 </head>
 
 <body>
 
 <header>
   <h1>➕ Post a Job</h1>
-  <p>Share job opportunities with others</p>
 </header>
 
-<section class="job">
+<div class="job">
 
-  <form action="https://formsubmit.co/luyoloofficial@gmail.com" method="POST">
+  <input id="title" placeholder="Job Title">
+  <input id="location" placeholder="Location">
+  <input id="image" placeholder="Image URL">
+  <input id="applyLink" placeholder="Apply Link">
+  <textarea id="description" placeholder="Description"></textarea>
 
-    <input type="text" name="job_title" placeholder="Job Title" required>
+  <button class="btn" onclick="postJob()">Submit Job</button>
 
-    <input type="text" name="location" placeholder="Location" required>
+</div>
 
-    <input type="url" name="image_url" placeholder="Image URL (optional)">
+<script>
+  const firebaseConfig = {
+    apiKey: "PASTE_HERE",
+    authDomain: "PASTE_HERE",
+    projectId: "PASTE_HERE",
+    storageBucket: "PASTE_HERE",
+    messagingSenderId: "PASTE_HERE",
+    appId: "PASTE_HERE"
+  };
 
-    <input type="url" name="apply_link" placeholder="Apply Link (WhatsApp, Website, Email link)" required>
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
 
-    <textarea name="description" placeholder="Job Description / Motivation" required></textarea>
+  function postJob() {
+    db.collection("jobs").add({
+      title: document.getElementById("title").value,
+      location: document.getElementById("location").value,
+      image: document.getElementById("image").value,
+      applyLink: document.getElementById("applyLink").value,
+      description: document.getElementById("description").value,
+      time: Date.now()
+    });
 
-    <!-- disables captcha page -->
-    <input type="hidden" name="_captcha" value="false">
-
-    <button type="submit" class="btn">Submit Job</button>
-
-  </form>
-
-  <p class="quote">“Opportunities multiply when shared.”</p>
-
-</section>
+    alert("Job posted successfully!");
+    window.location.href = "index.html";
+  }
+</script>
 
 </body>
 </html>
