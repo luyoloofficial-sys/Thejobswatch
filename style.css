@@ -65,3 +65,17 @@ input, textarea {
 textarea {
   height: 100px;
 }
+
+input, textarea {
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#jobs {
+  padding: 10px;
+}
