@@ -269,3 +269,26 @@ margin-top:15px;
 }
 
 }
+
+.hero-button{
+    display:inline-block;
+    margin:10px;
+    padding:14px 28px;
+    background:#0A66C2;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.hero-button:hover{
+    background:#084c91;
+}
+
+.hero-button.secondary{
+    background:#28a745;
+}
+
+.hero-button.secondary:hover{
+    background:#1f7d35;
+}
